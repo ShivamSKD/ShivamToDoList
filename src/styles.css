@@ -1,0 +1,127 @@
+/* Variables */
+:root {
+  --primary: #8a95b3;
+  --secondary: #484bf7a9;
+  --card: #000;
+  --text1: rgb(48, 67, 102);
+  --text2: #ccc;
+}
+
+/* 
+background: linear-gradient(to right, #1f1c2c, #928dab);
+background: linear-gradient(to right, #bbd2c5, #536976); 
+background: linear-gradient(to right, #403b4a, #e7e9bb); 
+*/
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background: var(--secondary); /* fallback for old browsers */
+  background: linear-gradient(
+    to right bottom,
+    var(--primary),
+    var(--secondary)
+  );
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-wrapper {
+  background-color: var(--card);
+  min-width: 400px;
+  min-height: 500px;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: 3px 6px 40px #000;
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  color: var(--text1);
+  text-align: center;
+  margin: 10px, 0px;
+}
+
+.task-input {
+  outline: none;
+  width: 260px;
+  padding: 15px;
+  font-size: 16px;
+  margin-right: 25px;
+  color: var(--text2);
+  background-color: var(--card);
+  border: 1px solid var(--card);
+  border-radius: 10px;
+}
+
+.button-add {
+  width: 70px;
+  padding: 10px 5px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 0;
+  background-color: var(--primary);
+  cursor: pointer;
+}
+.button-list {
+  width: 50%;
+  margin: 5px;
+}
+.flex-align {
+  display: flex;
+  align-items: center;
+}
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.list-item {
+  display: flex;
+  margin: 20px 0px;
+  border: 1px solid var(--text2);
+  border-radius: 10px;
+  padding: 2px;
+}
+
+.button-complete,
+.button-delete,
+.button-edit {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  font-size: 28px;
+  border-radius: 50%;
+  color: var(--primary);
+  padding: 0px 3px;
+}
+
+.complete {
+  text-decoration: line-through solid var(--primary);
+  opacity: 0.6;
+}
+
+.list {
+  width: 220px;
+  background-color: var(--card);
+  border: none;
+  color: var(--text2);
+  font-size: 15px;
+  padding-left: 20px;
+  margin-right: 10px;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
